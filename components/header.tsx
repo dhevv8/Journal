@@ -5,10 +5,10 @@ import { PenBox, FolderOpen } from "lucide-react";
 import Image from "next/image";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import UserMenu from "./user-menu";
-
+import {checkUser}  from "@/lib/checkUser";
 
 async function Header() {
-  // await checkUser();
+  await checkUser();
 
   return (
     <header className="container mx-auto">
