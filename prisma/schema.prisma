@@ -44,12 +44,12 @@ model Entry{
   title         String
   content       String  @db.Text
   collection    Collections? @relation(fields: [collectionId], references: [id],onDelete: Cascade)
-  collectionId  String
+  collectionId  String?
   user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId        String
   mood         String
   moodScore    Int
-  moodeImageUrl String?
+  moodImageUrl String?
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }

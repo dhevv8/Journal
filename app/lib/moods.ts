@@ -289,7 +289,7 @@ export const MOODS: { [key: string]: Mood } = {
     return "You've been having a tough time.";
   };
   
-  export const getMoodById = (moodId?:string):Mood|undefined => {
+  export const getMoodById = (moodId?:string) => {
     return moodId ? MOODS[moodId.toUpperCase()] : undefined;
   };
-  
+    
